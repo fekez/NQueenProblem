@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="NQueenProblem.Cell"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NQueenProblem"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="400"
+             Background="Gray">
+    <Grid x:Name="cellGrid">
+        <Image x:Name="cellImage"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Margin="20"
+               Stretch="Fill"/>
+    </Grid>
+</UserControl>

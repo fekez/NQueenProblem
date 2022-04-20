@@ -1,0 +1,50 @@
+﻿<Window x:Class="NQueenProblem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NQueenProblem"
+        mc:Ignorable="d"
+        Title="N királynő probléma"
+        Height="800"
+        Width="1200"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <local:Chessboard x:Name="myBoard" Grid.Column="0"></local:Chessboard>
+
+        <StackPanel Grid.Column="1"
+                    Margin="10">
+            <Label HorizontalAlignment="Center">Add meg mekkora táblát szeretnél (5-9):</Label>
+            <Slider x:Name="boardSizeSlider"
+                    Minimum="5"
+                    Maximum="8"
+                    TickFrequency="1"
+                    TickPlacement="BottomRight"
+                    IsSnapToTickEnabled="True"
+                    ValueChanged="BoardSizeSlider_ValueChanged"></Slider>
+            <Button x:Name="generateBoardButton"
+                    Content="Tábla generálása"
+                    Margin="10, 5"
+                    Padding="5, 10"
+                    Click="GenerateBoardButton_Click" />
+            <Button x:Name="getResults"
+                    Content="Megoldások keresése"
+                    Margin="10, 5"
+                    Padding="5, 10"
+                    Click="GetResults_Click" />
+            <ListBox x:Name="resultsListBox"
+                     Margin="10, 5"
+                     Height="500"
+                     HorizontalContentAlignment="Stretch"
+                     VerticalContentAlignment="Stretch"
+                     ScrollViewer.CanContentScroll="True"
+                     ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                     SelectionChanged="ResultsListBox_SelectionChanged"/>
+        </StackPanel>
+    </Grid>
+</Window>
