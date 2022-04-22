@@ -21,4 +21,10 @@
     <ProjectReference Include="..\EightQueen\EightQueen.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Sounds\chess-piece-place.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -65,5 +66,16 @@ public partial class Cell : UserControl
     public void RemoveQueenImage()
     {
         cellImage.Source = null;
+    }
+
+
+    /// <summary>
+    /// A metódus lejátsza a mezőre lépés hangját.
+    /// </summary>
+    public void PlayStepSound()
+    {
+        SoundPlayer player = new SoundPlayer();
+        player.SoundLocation = new Uri("./Sounds/chess-piece-place.wav", UriKind.Relative).OriginalString;
+        player.Play();
     }
 }

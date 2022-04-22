@@ -37,6 +37,7 @@
                     Margin="10, 5"
                     Padding="5, 10"
                     Click="GetResults_Click" />
+            <Label x:Name="resultsCount" Content="Találatok száma: 0 db." Margin="10,0,0,0" HorizontalAlignment="Left" Width="135"/>
             <ListBox x:Name="resultsListBox"
                      Margin="10, 5"
                      Height="500"
@@ -44,7 +45,9 @@
                      VerticalContentAlignment="Stretch"
                      ScrollViewer.CanContentScroll="True"
                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                     SelectionChanged="ResultsListBox_SelectionChanged"/>
+                     SelectionChanged="ResultsListBox_SelectionChanged">
+
+            </ListBox>
         </StackPanel>
     </Grid>
 </Window>
